@@ -40,6 +40,13 @@ body {
     border-left: 5px solid lightgray;
 }
 
+
+.item.collapsed {
+  border-right: 0px solid lightgrey;
+  width: 25px;
+  background-color: lightgray;
+}
+
     .workspace {
         height: var(--height);
         width:100%;
@@ -172,4 +179,41 @@ body {
         top: 50px;
 
       }
+
+
+      #reportoptions {
+        background-color: gainsboro;
+        color: #1a363c;
+        padding: 3px 3px 3px 15px;
+        height: 20px;
+        width: 100vw;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        text-size-adjust: 100%;
+        /* grid-area: reportoptions; */
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+
+    #upBtn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -21px;
+      left: 10px;
+      height: 22px;
+      width: 22px;
+      font-size: 20px;
+      color: rgb(51, 51, 51);
+      background-color: #ffffff;
+      /* outline-color: gainsboro; */
+      border: 1px solid #ddd;
+      z-index: 100;
+    }
+    
       
