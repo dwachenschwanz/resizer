@@ -6,6 +6,21 @@ const bars = document.querySelectorAll(".bar");
 console.log('bars: ',bars)
 let currentBar;
 
+
+const toggleButtons = document.querySelectorAll("button");
+    
+toggleButtons.forEach((e) => {
+    console.log(e.parentElement)
+    e.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(e.target.parentElement.parentElement)
+        e.target.parentElement.parentElement.classList.toggle("collapsed")
+    })
+})
+
+
+// document.getElementById("leftBtn").classList.toggle("collapsed");
+
 for (let bar of bars) {
   bar.addEventListener("mousedown", mousedown);
 
@@ -63,6 +78,10 @@ for (let bar of bars) {
 
     console.log("Child nodes:")
     console.log(parent.parentElement.childnodes)
+
+
+
+  
 
     // let siblings = getSiblings(parent);
     //     const siblingText = siblings.map(e => e);

@@ -182,10 +182,13 @@ body {
 
 
       #reportoptions {
-        background-color: gainsboro;
+        /* background-color: #fff; */
         color: #1a363c;
-        padding: 3px 3px 3px 15px;
+        padding: 3px 3px 0px 15px;
+        padding 0;
+        margin: 0;
         height: 20px;
+        height: 150px;
         width: 100vw;
         font-size: 14px;
         font-weight: bold;
@@ -193,10 +196,28 @@ body {
         text-size-adjust: 100%;
         /* grid-area: reportoptions; */
         position: fixed;
-        bottom: 0;
+        bottom: -3px;
         display: flex;
         align-items: center;
+        border-top: 20px solid gainsboro;
     }
+
+    #reportoptions.collapsed {
+        height: 0px;
+    }
+
+    #reportoptions > #title {
+        position: absolute;
+        top: -20px;
+        color: #1a363c;
+        /* color: greenyellow; */
+    }
+
+    /* #reportoptions > .content {
+        width: 100%;
+        height: 150px;
+        background-color: burlywood;
+    } */
 
 
     #upBtn {
@@ -204,7 +225,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      top: -21px;
+      top: -41px;
       left: 10px;
       height: 22px;
       width: 22px;
@@ -217,3 +238,51 @@ body {
     }
     
       
+
+    .item.left > button a:before {
+        font-family: FontAwesome;
+        content: "\f100";
+        display: inline-block;
+        color: rgb(51, 51, 51);
+        /* padding-right: 3px; */
+        /* vertical-align: middle; */
+     }
+     
+     .item.left.collapsed > button a:before {
+        content: "\f101";
+     }
+
+     .item.left.item.collapsed > button {
+        right: -21px;
+     }
+
+
+     .item.right > button a:before {
+        font-family: FontAwesome;
+        content: "\f101";
+        display: inline-block;
+        color: rgb(51, 51, 51);
+        /* vertical-align: middle; */
+     }
+     
+     .item.right.collapsed > button a:before {
+        content: "\f100";
+     }
+
+     .item.right.item.collapsed > button {
+        left: -26px;
+     }
+
+     #reportoptions > button a:before {
+        font-family: FontAwesome;
+        content: "\f103";
+        display: inline-block;
+        color: rgb(51, 51, 51);
+
+     }
+
+     #reportoptions.collapsed > button a:before {
+        content: "\f102";
+     }
+
+
